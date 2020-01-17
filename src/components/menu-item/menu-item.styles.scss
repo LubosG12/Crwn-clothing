@@ -32,8 +32,17 @@
       & .content {
         opacity: 0.9;
       }
+
+      &  .darken {
+        background-color: rgba($color: #000000, $alpha: 0);
+      }
     }
-    
+
+    .darken {
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: .3);
+    }
 
     .background-image {
       width: 100%;
@@ -41,10 +50,12 @@
       background-position: center;
       background-size: cover;
     }
+
+
   
     .content {
       height: 90px;
-      padding: 0 25px;
+      padding: 0 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
