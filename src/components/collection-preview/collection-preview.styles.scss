@@ -1,0 +1,24 @@
+.collection-preview {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 0 10px 20px 10px;
+    border-radius: 20px;
+    border: 2px;
+
+  
+  
+    .title {
+      padding-left: 10px;
+      font-size: 28px;
+      margin-bottom: 25px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+  
+    .preview {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
