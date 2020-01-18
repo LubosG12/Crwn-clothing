@@ -2,3 +2,16 @@ body {
     font-family: 'Open Sans Condensed';
     padding: 20px 80px;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transition: all .5s ease-in;
+}
+
+a:hover {
+    transform: scale(1.2);
+}
