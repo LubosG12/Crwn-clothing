@@ -11,7 +11,7 @@ class SignUp extends React.Component {
     constructor() {
         super();
 
-        this.setState={
+        this.state={
             displayName: '',
             email: '',
             password: '',
@@ -29,7 +29,7 @@ class SignUp extends React.Component {
         }
 
         try {
-            const { user } = await auth.createUserWithEmailAndPassword(email, password);
+            const { user } = await auth().createUserWithEmailAndPassword(email, password);
 
             await createUserProfileDocument( user, { displayName });
 
