@@ -3,7 +3,7 @@ body {
     padding: 20px 80px;
 }
 
-a {
+.option {
     text-decoration: none;
     color: black;
     font-weight: 400;
@@ -12,6 +12,10 @@ a {
     transition: all .5s ease-in;
 }
 
-a:hover {
+.option:hover {
     transform: scale(1.1);
+}
+
+* {
+    box-sizing: border-box;
 }
