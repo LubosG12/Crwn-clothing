@@ -23,7 +23,7 @@ class SignUp extends React.Component {
         event.preventDefault();
         const { displayName, email, password, confirmPassword } = this.state
 
-        if (password !== confirmPassword){
+        if (!(password===confirmPassword)){
             alert("Passwords don't match");
             return;
         }
@@ -41,7 +41,7 @@ class SignUp extends React.Component {
             })
             alert('Account successfully created')
         } catch (error) {
-            if (error.message == 'auth/weak-password') {
+            if (error.message === 'auth/weak-password') {
                 alert('The password is too weak.');
               } else {
                 alert(error.message);
