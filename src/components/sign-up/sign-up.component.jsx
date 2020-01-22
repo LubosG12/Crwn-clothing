@@ -3,7 +3,7 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { auth, createUserProfileDocument } from 'firebase';
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
 import './sign-up.styles.scss';
 
@@ -23,13 +23,13 @@ class SignUp extends React.Component {
         event.preventDefault();
         const { displayName, email, password, confirmPassword } = this.state
 
-        if (password ==! confirmPassword){
-            alert("passwords don't match");
+        if (password !== confirmPassword){
+            alert("Passwords don't match");
             return;
         }
 
         try {
-            const { user } = await auth().createUserWithEmailAndPassword(email, password);
+            const { user } = await auth.createUserWithEmailAndPassword(email, password);
 
             await createUserProfileDocument( user, { displayName });
 
@@ -39,8 +39,13 @@ class SignUp extends React.Component {
                 password: '',
                 confirmPassword: ''
             })
+            alert('Account successfully created')
         } catch (error) {
-            console.log(error);
+            if (error.message == 'auth/weak-password') {
+                alert('The password is too weak.');
+              } else {
+                alert(error.message);
+              }
         }
     }
 
