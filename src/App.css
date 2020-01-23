@@ -16,6 +16,10 @@ body {
     transform: scale(1.1);
 }
 
+.option-username:hover {
+    transform: none;
+}
+
 * {
     box-sizing: border-box;
 }
