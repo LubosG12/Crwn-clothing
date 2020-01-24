@@ -5,14 +5,30 @@
     justify-content: space-between;
     margin-bottom: 25px;
     padding-bottom: 20px;
-    border-bottom: 1px solid lightgrey;
+    position: relative;
+    
+
+    .title {
+      color: black;
+      font-weight: 900;
+      font-size: 2rem;
+      position: absolute;
+      top: 12px;
+      left: 70px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+   
   
     .logo-container {
       height: 100%;
       width: 70px;
-      padding: 25px;
+      padding: 10px;
       transform: none;
       box-sizing: inherit;
+      
     }
   
     .options {

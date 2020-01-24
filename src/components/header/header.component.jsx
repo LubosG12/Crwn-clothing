@@ -15,9 +15,12 @@ import './header.styles.scss';
 import userReducer from '../../redux/user/user.reducer';
 
 const Header = ({ currentUser, hidden }) => (
-    <div className="header">
+        <div className="header">
         <Link to="/" className="logo-container">
             <Logo className="logo"/>
+        </Link>
+        <Link to="/" className="logo-container">
+        <span className="title">CRWN CLOTHING</span>
         </Link>
         <div className="options">
             <Link className="option" to="/shop"> 

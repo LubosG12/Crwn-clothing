@@ -1,0 +1,37 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+
+    .content-container {
+        display: flex;
+        justify-content: space-evenly;
+
+        .left-block, .right-block{
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+    }
+
+    .credit {
+        color: white;
+        text-align: center;
+        border-top: 1px solid grey;
+        width: 100%;
+        letter-spacing: 2px;
+
+        a{ 
+            color: inherit;
+            text-decoration: none;
+
+        }
+
+    }
+}

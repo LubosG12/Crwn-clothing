@@ -1,6 +1,16 @@
 body {
     font-family: 'Open Sans Condensed';
+    letter-spacing: 1px;
     padding: 20px 80px;
+}
+
+.page-container {
+    position: relative;
+    min-height: 96vh;
+}
+
+.main-content {
+    padding-bottom: 150px;
 }
 
 .option {

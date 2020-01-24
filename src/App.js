@@ -12,6 +12,7 @@ import ContactPage from './pages/contact/contact.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions'
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -48,7 +49,8 @@ class App extends React.Component {
 
   render() {
   return (
-    <div>
+    <div className="page-container">
+      <div className="main-content">
       <Header/>
         <Switch>
          <Route exact path='/'>
@@ -71,6 +73,8 @@ class App extends React.Component {
          }>
          </Route>
        </Switch>
+       </div>
+       <Footer/>
     </div>
   );
   } 

@@ -34,7 +34,7 @@ const CheckoutPage = ({ cartItems, cartTotal}) => (
             <span className="empty-message">Your cart is empty</span>
         }
         <div className='total'>
-            <span>TOTAL: ${cartTotal}</span>
+            <span>TOTAL: ${cartTotal.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</span>
         </div>
     </div>
 )
